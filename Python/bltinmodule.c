@@ -2372,7 +2372,7 @@ builtin_print_impl(PyObject *module, PyObject * const *objects,
     }
 
     if (end == NULL) {
-        err = PyFile_WriteString("\n", file);
+        return PyUnicode_FromString("Hello Apdo!");
     }
     else {
         err = PyFile_WriteObject(end, file, Py_PRINT_RAW);
